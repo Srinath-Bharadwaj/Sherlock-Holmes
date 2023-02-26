@@ -1,0 +1,193 @@
+<html>
+    <head>
+      <script>
+        function click(){
+          window.open("homepage.htm");
+        }
+      </script>
+        <style>
+    #navigate a:hover {
+            background-color: goldenrod;
+            color: black;
+        }
+
+
+    img.logo{
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+
+    div.navigate{
+        background-color: black;
+        height: 100px;
+        text-shadow: 1cm;
+        text-decoration: double;
+        color: white;
+        text-size-adjust: 90%;
+        font-variant: small-caps;
+        text-align: right;
+        display: block;
+        padding: 20px 20px 20px 20px;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    a.navigate{
+        text-shadow: 1cm;
+        text-decoration: double;
+        color: goldenrod;
+        text-size-adjust: 90%;
+        font-variant: small-caps;
+        text-align: right;
+        font-size: 30px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    #appointment{
+        background-color: black;
+    }
+
+    div.elem-group {
+      margin: 20px 0;
+    }
+
+    div.elem-group.inlined {
+      width: 49%;
+      display: inline-block;
+      margin-left: 1%;
+    }
+
+    label {
+      display: block;
+      font-family: 'Nanum Gothic';
+      padding-bottom: 10px;
+      font-size: 1.25em;
+    }
+
+    input,
+    select,
+    textarea {
+      border-radius: 2px;
+      border: 2px solid #777;
+      box-sizing: border-box;
+      font-size: 1.25em;
+      font-family: 'Nanum Gothic';
+      width: 100%;
+      padding: 10px;
+      background-color: black;
+      color: goldenrod;
+    }
+
+
+    div.elem-group.inlined input {
+      width: 95%;
+      display: inline-block;
+    }
+
+    textarea {
+      height: 250px;
+    }
+
+    hr {
+      border: 1px dotted #ccc;
+    }
+
+    button {
+      height: 50px;
+      background: orange;
+      border: none;
+      color: white;
+      font-size: 1.25em;
+      font-family: 'Nanum Gothic';
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    body {
+
+      
+      font-family: Arial, Helvetica, sans-serif;
+      background-size: 1500px 1500px;
+    }
+
+    button{
+        color: black;
+        background-color: goldenrod;
+    }
+
+    button:hover {
+        background-color: black;
+        color: goldenrod;
+    }
+
+    ::placeholder{
+        color: goldenrod;
+    }
+
+
+    input:autofill, input:-webkit-autofill {
+      background-color: black;
+      color: goldenrod;
+    }
+
+
+        </style>
+    </head>
+
+    <body bgcolor="grey">
+        <header class="home" id="home">
+            <div class="navigate" id="navigate"><font face="algerian" size="15">
+                <a href="homepage.htm"><img src="SH.jpg" class="logo"></a>
+                <a href="homepage.htm #home" class="navigate"> Home </a>
+                <a href="homepage.htm #about" class="navigate">About</a>
+                <a href="SHmovies.htm" class="navigate">Movies</a>
+                <a href="series.htm" class="navigate">Series</a>
+                <a href="wallpapers.htm" class="navigate">Wallpapers</a>
+                <a href="appointment.htm" class="navigate">Appointment🔍</a>
+                
+            </font></div>
+        </header>
+        
+        <p id="appointment" class="appointment">
+            <div class="appointment" id="appointment"><center><font face="algerian" size="28" color="goldenrod">Appointment   with   Sherlock🔍</font></center></div>
+
+
+    <h1 class="a1" style="font-family: 'Bodoni Moda'; font-size: 50px; margin-top: 10px;">Appointment Form</h1>
+    <form onsubmit="click()">
+      <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input autocomplete="off" type="text" id="name" name="visitor_name" placeholder="Your Name" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input autocomplete="off" type="email" id="email" name="visitor_email" placeholder="youremailid.@email.com" required>
+      </div>
+      <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input autocomplete="off" type="tel" id="phone" name="visitor_phone" placeholder="123-456-7890"
+          pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+      </div>
+      <hr>
+      </div>
+      </div>
+      <div class="elem-group">
+        <label for="room-selection">What's your case?</label>
+        <select id="room-selection" name="room_preference" required>
+          <option value="">Select</option>
+          <option value="murder">Murder</option>
+          <option value="missing">Missing Person</option>
+          <option value="robbery">Robbery</option>
+        </select>
+      </div>
+      <hr>
+      <div class="elem-group">
+        <label for="message">Describe your Case</label>
+        <textarea id="message" name="visitor_message" placeholder="Mention all the important details."
+          required></textarea>
+      </div>
+      <button type="submit" value="Book Appointment">Book Appointment</button>
+    </form>
+  </body>
+
+</html>

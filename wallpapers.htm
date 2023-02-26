@@ -1,0 +1,106 @@
+<html>
+    <head><title>Wallpapers</title>
+
+        <script>
+
+            function load(){
+                document.getElementById("img").src="dsktp.jpg";
+            }
+
+
+            function pic(){
+                var a;
+               a= Math.floor(Math.random()*10);
+               if(a>=8){
+                document.getElementById("img").src="wallpaper1.jpg";
+               }
+               else if(a>=6){
+                document.getElementById("img").src="dsktp2.jpg";
+               }
+               else if(a>=4){
+                document.getElementById("img").src="dsktp3.jpg";
+               }
+               else if(a>=2){
+                document.getElementById("img").src="wallpaper2.jpg";
+               }
+               else{
+                document.getElementById("img").src="season2.jpg";
+               }
+                
+            }
+        </script>
+
+
+        <style>
+    #navigate a:hover {
+            background-color: goldenrod;
+            color: black;
+        }
+
+
+    img.logo{
+        height: 100px;
+        width: 100px;
+        float: left;
+    }
+
+    div.navigate{
+        background-color: black;
+        height: 100px;
+        text-shadow: 1cm;
+        text-decoration: double;
+        color: white;
+        text-size-adjust: 90%;
+        font-variant: small-caps;
+        text-align: right;
+        display: block;
+        padding: 20px 20px 20px 20px;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    a.navigate{
+        text-shadow: 1cm;
+        text-decoration: double;
+        color: goldenrod;
+        text-size-adjust: 90%;
+        font-variant: small-caps;
+        text-align: right;
+        font-size: 30px;
+        padding: 20px 20px 20px 20px;
+    }
+
+    #series{
+        background-color: black;
+    }
+
+    button.but{
+        background-color: black;
+        color: goldenrod;
+    }
+
+        </style>
+    </head>
+
+    <body bgcolor="grey" onload="load()">
+        <header class="home" id="home">
+            <div class="navigate" id="navigate"><font face="algerian" size="15">
+                <a href="homepage.htm"><img src="SH.jpg" class="logo"></a>
+                <a href="homepage.htm #home" class="navigate"> Home </a>
+                <a href="homepage.htm #about" class="navigate">About</a>
+                <a href="SHmovies.htm" class="navigate">Movies</a>
+                <a href="series.htm" class="navigate">Series</a>
+                <a href="wallpapers.htm" class="navigate">Wallpapers</a>
+                <a href="appointment.htm" class="navigate">Appointment🔍</a>
+                
+            </font></div>
+        </header>
+        
+        <p id="series" class="series">
+            <div class="series" id="series"><center><font face="algerian" size="28" color="goldenrod">WALLPAPERS</font></center></div></p>
+
+               <center><img height="500" width="1000" id="img"><br><br>
+                <button value="Change Picture" id="but" class="but" onclick="pic()">Click for <br>New Wallpaper</button></center><br>
+                
+
+    </body>
